@@ -1,0 +1,58 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$title-color: lighten(DarkMagenta, 10%);
+
+.banner--logo {
+  margin-top: -8rem;
+  width: 150px;
+  height: 150px;
+}
+
+.banner--title {
+  display: inline;
+  margin-left: 1rem;
+}
+
+.banner--title__main-title {
+  color: $title-color;
+  margin-top: 2rem;
+  display: inline-block;
+  font-size: 4.5rem;
+}
+
+.banner--title__sub-title {
+  color: $title-color;
+  font-size: 3rem;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.banner--admin-link {
+  margin-top: 40px;
+  margin-right: 40px;
+  float: right;
+  display: inline;
+}
+
+body {
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
