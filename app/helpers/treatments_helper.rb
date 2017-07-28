@@ -11,9 +11,9 @@ module TreatmentsHelper
     if year < 2016
       week = week + 1
     end
-    puts Date.commercial(year, week, 1)
-    puts format_date Date.commercial(year, week, 1)
-    puts ""
+    # puts Date.commercial(year, week, 1)
+    # puts format_date Date.commercial(year, week, 1)
+    # puts ""
     date_text = format_date Date.commercial(year, week, 1)
     "Week beginning: " + date_text
   end
