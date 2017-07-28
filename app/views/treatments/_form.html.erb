@@ -84,6 +84,7 @@
     <%= f.text_field :outcome %>
   </div>
   <div class="actions">
-    <%= f.submit class: "btn btn-primary" %>
+    <% text = @treatment.persisted? ? "Edit treatment" : "Add treatment" %>
+    <%= f.submit text, class: "btn btn-primary" %>
   </div>
 <% end %>

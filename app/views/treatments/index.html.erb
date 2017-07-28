@@ -20,7 +20,7 @@
     <tbody>
       <% @treatments.each do |treatment| %>
         <tr>
-          <td><%= treatment.date_of_treatment %></td>
+          <td><%= format_date treatment.date_of_treatment %></td>
           <td><%= treatment.client_name %></td>
           <td><%= treatment.venue %></td>
           <td>
