@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<% if @filter_applied %>
+  <div class="scaffold-nav">
+    <%= link_to 'Back to All Treatments', treatments_path, class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
 <h1>All Treatments</h1>
 
 <% if @treatments.empty? %>

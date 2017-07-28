@@ -4,7 +4,13 @@ class TreatmentsController < ApplicationController
   # GET /treatments
   # GET /treatments.json
   def index
+    @filter_applied = false
     @treatments = Treatment.all
+
+    if params[:col].present? && params[:val].present?
+      @treatments = @treatments.where(params[:col] => params[:val])
+      @filter_applied = true
+    end
   end
 
   # GET /treatments/1
