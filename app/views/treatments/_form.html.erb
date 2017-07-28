@@ -17,27 +17,27 @@
   </div>
   <div class="field">
     <%= f.label :client_name %><br>
-    <%= f.text_field :client_name %>
+    <%= f.text_field :client_name, class: "wide-input" %>
   </div>
   <div class="field">
     <%= f.label :venue %><br>
-    <%= f.text_field :venue %>
+    <%= f.text_field :venue, class: "wide-input"  %>
   </div>
   <div class="field">
     <%= f.label :consent %><br>
-    <%= f.text_field :consent %>
+    <%= f.text_field :consent, class: "wide-input"  %>
   </div>
   <div class="field">
     <%= f.label :contra_indications %><br>
-    <%= f.text_area :contra_indications %>
+    <%= f.text_area :contra_indications, class: "wide-input"  %>
   </div>
   <div class="field">
     <%= f.label :assessment %><br>
-    <%= f.text_area :assessment %>
+    <%= f.text_area :assessment, class: "wide-input"  %>
   </div>
   <div class="field">
     <%= f.label :daily_goal %><br>
-    <%= f.text_area :daily_goal %>
+    <%= f.text_area :daily_goal, class: "wide-input"  %>
   </div>
   <div class="field">
     <%= f.label :aromatherapy %><br>
@@ -69,19 +69,19 @@
   </div>
   <div class="field">
     <%= f.label :essentail_oils %><br>
-    <%= f.text_field :essentail_oils %>
+    <%= f.text_field :essentail_oils, class: "wide-input"  %>
   </div>
   <div class="field">
     <%= f.label :music %><br>
-    <%= f.text_field :music %>
+    <%= f.text_field :music, class: "wide-input"  %>
   </div>
   <div class="field">
     <%= f.label :lighting %><br>
-    <%= f.text_field :lighting %>
+    <%= f.text_field :lighting, class: "wide-input"  %>
   </div>
   <div class="field">
     <%= f.label :outcome %><br>
-    <%= f.text_field :outcome %>
+    <%= f.text_field :outcome, class: "wide-input"  %>
   </div>
   <div class="actions">
     <% text = @treatment.persisted? ? "Edit treatment" : "Add treatment" %>
