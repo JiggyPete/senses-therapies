@@ -4,7 +4,7 @@ class TreatmentsController < ApplicationController
   # GET /treatments
   # GET /treatments.json
   def index
-    @treatments = Treatment.order(created_at: :desc)
+    @treatments = Treatment.all
   end
 
   # GET /treatments/1
