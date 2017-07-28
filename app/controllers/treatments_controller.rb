@@ -5,7 +5,7 @@ class TreatmentsController < ApplicationController
   # GET /treatments.json
   def index
     @filter_applied = false
-    @treatments = Treatment.all
+    @treatments = Treatment.all.order(date_of_treatment: :desc)
 
     if params[:col].present? && params[:val].present?
       @treatments = @treatments.where(params[:col] => params[:val])

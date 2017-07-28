@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require legacy
+//= require picker
+//= require pick.date
 //= require turbolinks
 //= require_tree .
 

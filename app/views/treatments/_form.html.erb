@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :date_of_treatment %><br>
-    <%= f.date_select :date_of_treatment %>
+    <%= f.text_field :date_of_treatment, class: "datepicker", value: @treatment.date_of_treatment.try(:strftime, "%d %B, %Y") %>
   </div>
   <div class="field">
     <%= f.label :client_name %><br>
@@ -94,3 +94,7 @@
     <%= f.submit text, class: "btn btn-primary" %>
   </div>
 <% end %>
+
+<script type="application/javascript">
+  $( ".datepicker" ).pickadate();
+</script>
