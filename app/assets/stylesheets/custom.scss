@@ -92,8 +92,9 @@ textarea.wide-input {
 }
 
 label {
-  font-size: 1.7rem;
+  font-size: 2rem;
   padding-top: 1.5rem;
+  margin-bottom: 1rem;
 
 }
 
@@ -122,4 +123,10 @@ label {
 
 input[type=checkbox] {
   transform: scale(1.5);
+}
+
+.treatments-show p {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

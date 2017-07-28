@@ -3,96 +3,103 @@
 <%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
 
 <p id="notice"><%= notice %></p>
+<div class="treatments-show">
+  <p>
+    <strong>Date of treatment:</strong>
+    <%= format_date @treatment.date_of_treatment %>
+  </p>
 
-<p>
-  <strong>Date of treatment:</strong>
-  <%= @treatment.date_of_treatment %>
-</p>
+  <p>
+    <strong>Client name:</strong>
+    <%= @treatment.client_name %>
+  </p>
 
-<p>
-  <strong>Client name:</strong>
-  <%= @treatment.client_name %>
-</p>
+  <p>
+    <strong>Venue:</strong>
+    <%= @treatment.venue %>
+  </p>
 
-<p>
-  <strong>Venue:</strong>
-  <%= @treatment.venue %>
-</p>
+  <p>
+    <strong>Consent:</strong>
+    <%= @treatment.consent %>
+  </p>
 
-<p>
-  <strong>Consent:</strong>
-  <%= @treatment.consent %>
-</p>
+  <p>
+    <strong>Contra indications:</strong>
+    <%= @treatment.contra_indications %>
+  </p>
 
-<p>
-  <strong>Contra indications:</strong>
-  <%= @treatment.contra_indications %>
-</p>
+  <p>
+    <strong>Assessment:</strong>
+    <%= @treatment.assessment %>
+  </p>
 
-<p>
-  <strong>Assessment:</strong>
-  <%= @treatment.assessment %>
-</p>
+  <p>
+    <strong>Daily goal:</strong>
+    <%= @treatment.daily_goal %>
+  </p>
 
-<p>
-  <strong>Daily goal:</strong>
-  <%= @treatment.daily_goal %>
-</p>
+  <div class="therapies">
+    <h2>Therapies</h2>
+    <p>
+      <strong>Aromatherapy:</strong>
+      <%= @treatment.aromatherapy %>
+    </p>
 
-<p>
-  <strong>Aromatherapy:</strong>
-  <%= @treatment.aromatherapy %>
-</p>
+    <p>
+      <strong>Reflexology:</strong>
+      <%= @treatment.reflexology %>
+    </p>
 
-<p>
-  <strong>Reflexology:</strong>
-  <%= @treatment.reflexology %>
-</p>
+    <p>
+      <strong>Other therapy:</strong>
+      <%= @treatment.other_therapy %>
+    </p>
+  </div>
 
-<p>
-  <strong>Other therapy:</strong>
-  <%= @treatment.other_therapy %>
-</p>
+  <div class="oils">
+    <h2>Oils</h2>
+    <p>
+      <strong>Grapeseed:</strong>
+      <%= @treatment.grapeseed %>
+    </p>
 
-<p>
-  <strong>Grapeseed:</strong>
-  <%= @treatment.grapeseed %>
-</p>
+    <p>
+      <strong>Sweet almond:</strong>
+      <%= @treatment.sweet_almond %>
+    </p>
 
-<p>
-  <strong>Sweet almond:</strong>
-  <%= @treatment.sweet_almond %>
-</p>
+    <p>
+      <strong>Resehip:</strong>
+      <%= @treatment.resehip %>
+    </p>
 
-<p>
-  <strong>Resehip:</strong>
-  <%= @treatment.resehip %>
-</p>
+    <p>
+      <strong>Other oils:</strong>
+      <%= @treatment.other_oils %>
+    </p>
+  </div>
 
-<p>
-  <strong>Other oils:</strong>
-  <%= @treatment.other_oils %>
-</p>
+  <p>
+    <strong>Essentail oils:</strong>
+    <%= @treatment.essentail_oils %>
+  </p>
 
-<p>
-  <strong>Essentail oils:</strong>
-  <%= @treatment.essentail_oils %>
-</p>
+  <p>
+    <strong>Music:</strong>
+    <%= @treatment.music %>
+  </p>
 
-<p>
-  <strong>Music:</strong>
-  <%= @treatment.music %>
-</p>
+  <p>
+    <strong>Lighting:</strong>
+    <%= @treatment.lighting %>
+  </p>
 
-<p>
-  <strong>Lighting:</strong>
-  <%= @treatment.lighting %>
-</p>
-
-<p>
-  <strong>Outcome:</strong>
-  <%= @treatment.outcome %>
-</p>
+  <p>
+    <strong>Outcome:</strong>
+    <%= @treatment.outcome %>
+  </p>
+</div>
 
 <%= link_to 'Edit', edit_treatment_path(@treatment), class: "btn btn-primary" %>
 <%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
