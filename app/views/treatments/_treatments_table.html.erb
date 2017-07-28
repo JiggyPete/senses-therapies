@@ -11,9 +11,9 @@
   <tbody>
     <% treatments.each do |treatment| %>
       <tr>
-        <td><%= link_to format_date(treatment.date_of_treatment), col: :date_of_treatment, val: treatment.date_of_treatment %></td>
-        <td><%= link_to treatment.client_name, col: :client_name, val: treatment.client_name %></td>
-        <td><%= link_to treatment.venue, col: :venue, val: treatment.venue %></td>
+        <td><%= link_to format_date(treatment.date_of_treatment), {col: :date_of_treatment, val: treatment.date_of_treatment}, class: "table-striped--link" %></td>
+        <td><%= link_to treatment.client_name, {col: :client_name, val: treatment.client_name}, class: "table-striped--link" %></td>
+        <td><%= link_to treatment.venue, {col: :venue, val: treatment.venue}, class: "table-striped--link" %></td>
         <td>
           <div>
           <%= link_to 'Show', treatment, class: "btn btn-primary" %>
