@@ -1,4 +1,5 @@
 class TreatmentsController < ApplicationController
+  http_basic_authenticate_with name: ENV["SENSES_USERNAME"], password: ENV["SENSES_PASSWORD"]
   before_action :set_treatment, only: [:show, :edit, :update, :destroy]
 
   # GET /treatments
