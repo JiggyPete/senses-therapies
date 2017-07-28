@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_of_treatment: 2017-07-27
+  client_name: MyString
+  venue: MyString
+  consent: MyString
+  contra_indications: MyText
+  assessment: MyText
+  daily_goal: MyText
+  aromatherapy: false
+  reflexology: false
+  other_therapy: false
+  grapeseed: false
+  sweet_almond: false
+  resehip: false
+  other_oils: false
+  essentail_oils: MyString
+  music: MyString
+  lighting: MyString
+  outcome: MyString
+
+two:
+  date_of_treatment: 2017-07-27
+  client_name: MyString
+  venue: MyString
+  consent: MyString
+  contra_indications: MyText
+  assessment: MyText
+  daily_goal: MyText
+  aromatherapy: false
+  reflexology: false
+  other_therapy: false
+  grapeseed: false
+  sweet_almond: false
+  resehip: false
+  other_oils: false
+  essentail_oils: MyString
+  music: MyString
+  lighting: MyString
+  outcome: MyString

@@ -1,0 +1,89 @@
+<%= form_for(@treatment) do |f| %>
+  <% if @treatment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@treatment.errors.count, "error") %> prohibited this treatment from being saved:</h2>
+
+      <ul>
+      <% @treatment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date_of_treatment %><br>
+    <%= f.date_select :date_of_treatment %>
+  </div>
+  <div class="field">
+    <%= f.label :client_name %><br>
+    <%= f.text_field :client_name %>
+  </div>
+  <div class="field">
+    <%= f.label :venue %><br>
+    <%= f.text_field :venue %>
+  </div>
+  <div class="field">
+    <%= f.label :consent %><br>
+    <%= f.text_field :consent %>
+  </div>
+  <div class="field">
+    <%= f.label :contra_indications %><br>
+    <%= f.text_area :contra_indications %>
+  </div>
+  <div class="field">
+    <%= f.label :assessment %><br>
+    <%= f.text_area :assessment %>
+  </div>
+  <div class="field">
+    <%= f.label :daily_goal %><br>
+    <%= f.text_area :daily_goal %>
+  </div>
+  <div class="field">
+    <%= f.label :aromatherapy %><br>
+    <%= f.check_box :aromatherapy %>
+  </div>
+  <div class="field">
+    <%= f.label :reflexology %><br>
+    <%= f.check_box :reflexology %>
+  </div>
+  <div class="field">
+    <%= f.label :other_therapy %><br>
+    <%= f.check_box :other_therapy %>
+  </div>
+  <div class="field">
+    <%= f.label :grapeseed %><br>
+    <%= f.check_box :grapeseed %>
+  </div>
+  <div class="field">
+    <%= f.label :sweet_almond %><br>
+    <%= f.check_box :sweet_almond %>
+  </div>
+  <div class="field">
+    <%= f.label :resehip %><br>
+    <%= f.check_box :resehip %>
+  </div>
+  <div class="field">
+    <%= f.label :other_oils %><br>
+    <%= f.check_box :other_oils %>
+  </div>
+  <div class="field">
+    <%= f.label :essentail_oils %><br>
+    <%= f.text_field :essentail_oils %>
+  </div>
+  <div class="field">
+    <%= f.label :music %><br>
+    <%= f.text_field :music %>
+  </div>
+  <div class="field">
+    <%= f.label :lighting %><br>
+    <%= f.text_field :lighting %>
+  </div>
+  <div class="field">
+    <%= f.label :outcome %><br>
+    <%= f.text_field :outcome %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

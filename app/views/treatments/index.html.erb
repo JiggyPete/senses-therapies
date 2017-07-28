@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>All Treatments</h1>
+
+<% if @treatments.empty? %>
+  <p>
+    So far you haven't added any treatments.
+  </p>
+<% else %>
+  <table>
+    <thead>
+      <tr>
+        <th class="col-xs-1">Date of treatment</th>
+        <th class="col-xs-1">Client name</th>
+        <th class="col-xs-1">Venue</th>
+        <th class="col-xs-2"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @treatments.each do |treatment| %>
+        <tr>
+          <td><%= treatment.date_of_treatment %></td>
+          <td><%= treatment.client_name %></td>
+          <td><%= treatment.venue %></td>
+          <td><%= link_to 'Show', treatment %></td>
+          <td><%= link_to 'Edit', edit_treatment_path(treatment) %></td>
+          <td><%= link_to 'Destroy', treatment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+<br>
+
+<%= link_to 'New Treatment', new_treatment_path, class: "btn btn-primary" %>
