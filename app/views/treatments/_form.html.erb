@@ -39,33 +39,39 @@
     <%= f.label :daily_goal %><br>
     <%= f.text_area :daily_goal, class: "wide-input"  %>
   </div>
-  <div class="field">
-    <%= f.label :aromatherapy %><br>
-    <%= f.check_box :aromatherapy %>
+  <div class="therapies">
+    <h2>Therapies</h2>
+    <span class="field">
+      <%= f.check_box :aromatherapy %>
+      <%= f.label :aromatherapy %><br>
+    </span>
+    <span class="field">
+      <%= f.check_box :reflexology %>
+      <%= f.label :reflexology %><br>
+    </span>
+    <span class="field">
+      <%= f.check_box :other_therapy %>
+      <%= f.label :other_therapy %><br>
+    </span>
   </div>
-  <div class="field">
-    <%= f.label :reflexology %><br>
-    <%= f.check_box :reflexology %>
-  </div>
-  <div class="field">
-    <%= f.label :other_therapy %><br>
-    <%= f.check_box :other_therapy %>
-  </div>
-  <div class="field">
-    <%= f.label :grapeseed %><br>
-    <%= f.check_box :grapeseed %>
-  </div>
-  <div class="field">
-    <%= f.label :sweet_almond %><br>
-    <%= f.check_box :sweet_almond %>
-  </div>
-  <div class="field">
-    <%= f.label :resehip %><br>
-    <%= f.check_box :resehip %>
-  </div>
-  <div class="field">
-    <%= f.label :other_oils %><br>
-    <%= f.check_box :other_oils %>
+  <div class="oils">
+    <h2>Oils</h2>
+    <div class="field">
+      <%= f.check_box :grapeseed %>
+      <%= f.label :grapeseed %><br>
+    </div>
+    <div class="field">
+      <%= f.check_box :sweet_almond %>
+      <%= f.label :sweet_almond %><br>
+    </div>
+    <div class="field">
+      <%= f.check_box :resehip %>
+      <%= f.label :resehip %><br>
+    </div>
+    <div class="field">
+      <%= f.check_box :other_oils %>
+      <%= f.label :other_oils %><br>
+    </div>
   </div>
   <div class="field">
     <%= f.label :essentail_oils %><br>
@@ -84,7 +90,7 @@
     <%= f.text_field :outcome, class: "wide-input"  %>
   </div>
   <div class="actions">
-    <% text = @treatment.persisted? ? "Edit treatment" : "Add treatment" %>
+    <% text = @treatment.persisted? ? "Update treatment" : "Add treatment" %>
     <%= f.submit text, class: "btn btn-primary" %>
   </div>
 <% end %>
