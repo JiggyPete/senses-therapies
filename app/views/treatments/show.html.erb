@@ -1,6 +1,9 @@
+<div class="scaffold-nav">
+  <%= link_to 'Edit', edit_treatment_path(@treatment), class: "btn btn-primary" %>
+  <%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
+</div>
 
-<%= link_to 'Edit', edit_treatment_path(@treatment), class: "btn btn-primary" %>
-<%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
+<h1>Treatment for <%= @treatment.client_name %></h1>
 
 <p id="notice"><%= notice %></p>
 <div class="treatments-show">
@@ -101,5 +104,7 @@
   </p>
 </div>
 
-<%= link_to 'Edit', edit_treatment_path(@treatment), class: "btn btn-primary" %>
-<%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
+<div class="scaffold-nav">
+  <%= link_to 'Edit', edit_treatment_path(@treatment), class: "btn btn-primary" %>
+  <%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
+</div>

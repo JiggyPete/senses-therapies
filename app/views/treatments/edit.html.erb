@@ -1,9 +1,13 @@
-<h1>Editing Treatment for <%= @treatment.client_name %></h1>
+<div class="scaffold-nav">
+  <%= link_to 'Show', @treatment, class: "btn btn-primary" %>
+  <%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
+</div>
 
-<%= link_to 'Show', @treatment, class: "btn btn-primary" %>
-<%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
+<h1>Editing Treatment for <%= @treatment.client_name %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @treatment, class: "btn btn-primary" %>
-<%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
+<div class="scaffold-nav">
+  <%= link_to 'Show', @treatment, class: "btn btn-primary" %>
+  <%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
+</div>
