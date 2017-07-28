@@ -4,40 +4,14 @@
 
 <% if @treatments.empty? %>
   <p>
-    So far you haven't added any treatments.
+    So far we don't have any treatments.
   </p>
 <% else %>
   <% @treatments.group_by(&:year).each do |year, year_treatments| %>
     <% year_treatments.group_by(&:week).each do |week, week_treatments| %>
       <br/>
       <label class=""> <%= week_heading year.to_i, week.to_i %></label>
-      <table class="table-striped">
-        <thead>
-          <tr>
-            <th class="col-xs-1">Date of treatment</th>
-            <th class="col-xs-1">Client name</th>
-            <th class="col-xs-1">Venue</th>
-            <th class="col-xs-1"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% week_treatments.sort{|a,b| a.date_of_treatment <=> b.date_of_treatment}.reverse.each do |treatment| %>
-            <tr>
-              <td><%= format_date treatment.date_of_treatment %></td>
-              <td><%= treatment.client_name %></td>
-              <td><%= treatment.venue %></td>
-              <td>
-                <div>
-                <%= link_to 'Show', treatment, class: "btn btn-primary" %>
-                <%= link_to 'Edit', edit_treatment_path(treatment), class: "btn btn-primary" %>
-                <%= link_to 'Destroy', treatment, method: :delete, class: "btn btn-primary", data: { confirm: 'Are you sure?' } %>
-                </div>
-              </td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+      <%= render 'treatments_table', treatments: week_treatments.sort{|a,b| a.date_of_treatment <=> b.date_of_treatment}.reverse %>
       <br/>
     <% end %>
   <% end %>

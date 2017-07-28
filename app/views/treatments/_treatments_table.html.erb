@@ -1,0 +1,27 @@
+<table class="table-striped">
+  <thead>
+    <tr>
+      <th class="col-xs-1">Date of treatment</th>
+      <th class="col-xs-1">Client name</th>
+      <th class="col-xs-1">Venue</th>
+      <th class="col-xs-1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% treatments.each do |treatment| %>
+      <tr>
+        <td><%= format_date treatment.date_of_treatment %></td>
+        <td><%= treatment.client_name %></td>
+        <td><%= treatment.venue %></td>
+        <td>
+          <div>
+          <%= link_to 'Show', treatment, class: "btn btn-primary" %>
+          <%= link_to 'Edit', edit_treatment_path(treatment), class: "btn btn-primary" %>
+          <%= link_to 'Destroy', treatment, method: :delete, class: "btn btn-primary", data: { confirm: 'Are you sure?' } %>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
