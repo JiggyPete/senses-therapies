@@ -1,7 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$title-color: lighten(DarkMagenta, 10%);
+$main-color: lighten(DarkMagenta, 10%);
+$main-color--light: lighten($main-color, 10%);
+$main-color--dark: darken($main-color, 10%);
 
 .banner--logo {
   margin-top: -8rem;
@@ -16,7 +18,7 @@ $title-color: lighten(DarkMagenta, 10%);
 }
 
 .banner--title__main-title {
-  color: $title-color;
+  color: $main-color;
   display: inline-block;
   font-size: 4.5rem;
   margin: 0;
@@ -24,7 +26,7 @@ $title-color: lighten(DarkMagenta, 10%);
 }
 
 .banner--title__sub-title {
-  color: $title-color;
+  color: $main-color;
   font-size: 3rem;
   letter-spacing: -1px;
   margin-top: 4rem;
@@ -38,8 +40,18 @@ $title-color: lighten(DarkMagenta, 10%);
   display: inline;
 }
 
+.btn-primary {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: $main-color;
+  border-color: $main-color--dark;
+}
+
+.btn-primary:hover {
+  background-color: $main-color--light;
+}
 .btn-primary:visited {
-    color: white;
+  color: white;
 }
 
 body {

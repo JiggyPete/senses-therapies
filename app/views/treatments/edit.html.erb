@@ -1,6 +1,9 @@
-<h1>Editing Treatment</h1>
+<h1>Editing Treatment for <%= @treatment.client_name %></h1>
+
+<%= link_to 'Show', @treatment, class: "btn btn-primary" %>
+<%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @treatment %> |
-<%= link_to 'Back', treatments_path %>
+<%= link_to 'Show', @treatment, class: "btn btn-primary" %>
+<%= link_to 'Back', treatments_path, class: 'btn btn-primary' %>

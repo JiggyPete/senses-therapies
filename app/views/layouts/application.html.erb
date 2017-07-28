@@ -7,17 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="app">
-  <div class="banner">
+  <div class="app">
     <%= image_tag 'logo.jpg', class: "banner--logo" %>
     <div class="banner--title">
       <div class="banner--title__main-title">Senses</h1>
       <div class="banner--title__sub-title">Holistic & Multisensory Therapies</div>
     </div>
     <h4 class="banner--admin-link"><%= link_to 'Admin', treatments_path %></h4>
+    <hr/>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <hr/>
+    <footer>
+      <p>© Senses Therapies 2017</p>
+    </footer>
   </div>
-  <%= yield %>
-</div>
 
 </body>
 </html>
