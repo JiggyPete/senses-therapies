@@ -93,7 +93,7 @@
   </div>
   <div class="field">
     <%= f.label :outcome %><br>
-    <%= f.text_field :outcome, class: "wide-input"  %>
+    <%= f.text_area :outcome, class: "wide-input"  %>
   </div>
   <div class="actions">
     <% text = @treatment.persisted? ? "Update treatment" : "Add treatment" %>
