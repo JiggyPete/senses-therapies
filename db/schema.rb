@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20170727211948) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "treatments", force: :cascade do |t|
     t.date     "date_of_treatment"
     t.string   "client_name"
