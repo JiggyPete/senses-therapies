@@ -10,7 +10,8 @@
 
 <% if @treatments.empty? %>
   <p>
-    So far we don't have any treatments.
+    No treatments have been entered yet.
+    Press the big lovely button below to get started.
   </p>
 <% else %>
   <% @treatments.group_by(&:year).each do |year, year_treatments| %>
