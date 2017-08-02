@@ -13,7 +13,7 @@ one:
   other_therapy: false
   grapeseed: false
   sweet_almond: false
-  resehip: false
+  rosehip: false
   other_oils: false
   essentail_oils: MyString
   music: MyString
@@ -33,7 +33,7 @@ two:
   other_therapy: false
   grapeseed: false
   sweet_almond: false
-  resehip: false
+  rosehip: false
   other_oils: false
   essentail_oils: MyString
   music: MyString
