@@ -76,6 +76,6 @@ class TreatmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def treatment_params
-      params.require(:treatment).permit(:date_of_treatment, :client_name, :venue, :consent, :contra_indications, :assessment, :daily_goal, :aromatherapy, :reflexology, :grapeseed, :sweet_almond, :rosehip, :other, :essentail_oils, :music, :lighting, :outcome, :indian_head_massage)
+      params.require(:treatment).permit(:date_of_treatment, :client_name, :venue, :consent, :contra_indications, :assessment, :daily_goal, :aromatherapy, :reflexology, :grapeseed, :sweet_almond, :rosehip, :other, :essentail_oils, :music, :lighting, :outcome, :indian_head_massage, :holistic_facial)
     end
 end
