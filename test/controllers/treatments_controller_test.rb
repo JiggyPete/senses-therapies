@@ -18,7 +18,7 @@ class TreatmentsControllerTest < ActionController::TestCase
 
   test "should create treatment" do
     assert_difference('Treatment.count') do
-      post :create, treatment: { aromatherapy: @treatment.aromatherapy, assessment: @treatment.assessment, client_name: @treatment.client_name, consent: @treatment.consent, contra_indications: @treatment.contra_indications, daily_goal: @treatment.daily_goal, date_of_treatment: @treatment.date_of_treatment, essentail_oils: @treatment.essentail_oils, grapeseed: @treatment.grapeseed, lighting: @treatment.lighting, music: @treatment.music, other_oils: @treatment.other_oils, other_therapy: @treatment.other_therapy, outcome: @treatment.outcome, reflexology: @treatment.reflexology, rosehip: @treatment.rosehip, sweet_almond: @treatment.sweet_almond, venue: @treatment.venue }
+      post :create, treatment: { aromatherapy: @treatment.aromatherapy, assessment: @treatment.assessment, client_name: @treatment.client_name, consent: @treatment.consent, contra_indications: @treatment.contra_indications, daily_goal: @treatment.daily_goal, date_of_treatment: @treatment.date_of_treatment, essentail_oils: @treatment.essentail_oils, grapeseed: @treatment.grapeseed, lighting: @treatment.lighting, music: @treatment.music, other: @treatment.other, other_therapy: @treatment.other_therapy, outcome: @treatment.outcome, reflexology: @treatment.reflexology, rosehip: @treatment.rosehip, sweet_almond: @treatment.sweet_almond, venue: @treatment.venue }
     end
 
     assert_redirected_to treatment_path(assigns(:treatment))
@@ -35,7 +35,7 @@ class TreatmentsControllerTest < ActionController::TestCase
   end
 
   test "should update treatment" do
-    patch :update, id: @treatment, treatment: { aromatherapy: @treatment.aromatherapy, assessment: @treatment.assessment, client_name: @treatment.client_name, consent: @treatment.consent, contra_indications: @treatment.contra_indications, daily_goal: @treatment.daily_goal, date_of_treatment: @treatment.date_of_treatment, essentail_oils: @treatment.essentail_oils, grapeseed: @treatment.grapeseed, lighting: @treatment.lighting, music: @treatment.music, other_oils: @treatment.other_oils, other_therapy: @treatment.other_therapy, outcome: @treatment.outcome, reflexology: @treatment.reflexology, rosehip: @treatment.rosehip, sweet_almond: @treatment.sweet_almond, venue: @treatment.venue }
+    patch :update, id: @treatment, treatment: { aromatherapy: @treatment.aromatherapy, assessment: @treatment.assessment, client_name: @treatment.client_name, consent: @treatment.consent, contra_indications: @treatment.contra_indications, daily_goal: @treatment.daily_goal, date_of_treatment: @treatment.date_of_treatment, essentail_oils: @treatment.essentail_oils, grapeseed: @treatment.grapeseed, lighting: @treatment.lighting, music: @treatment.music, other: @treatment.other, other_therapy: @treatment.other_therapy, outcome: @treatment.outcome, reflexology: @treatment.reflexology, rosehip: @treatment.rosehip, sweet_almond: @treatment.sweet_almond, venue: @treatment.venue }
     assert_redirected_to treatment_path(assigns(:treatment))
   end
 

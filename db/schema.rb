@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170802181135) do
+ActiveRecord::Schema.define(version: 20170824200929) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,13 +30,13 @@ ActiveRecord::Schema.define(version: 20170802181135) do
     t.boolean  "grapeseed"
     t.boolean  "sweet_almond"
     t.boolean  "rosehip"
-    t.boolean  "other_oils"
     t.string   "essentail_oils"
     t.string   "music"
     t.string   "lighting"
     t.text     "outcome"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.string   "other"
   end
 
 end
