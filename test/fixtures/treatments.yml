@@ -10,7 +10,6 @@ one:
   daily_goal: MyText
   aromatherapy: false
   reflexology: false
-  other_therapy: false
   grapeseed: false
   sweet_almond: false
   rosehip: false
@@ -30,7 +29,6 @@ two:
   daily_goal: MyText
   aromatherapy: false
   reflexology: false
-  other_therapy: false
   grapeseed: false
   sweet_almond: false
   rosehip: false
