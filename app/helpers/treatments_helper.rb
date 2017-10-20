@@ -17,4 +17,8 @@ module TreatmentsHelper
     date_text = format_date Date.commercial(year, week, 1)
     "Week beginning: " + date_text
   end
+
+  def paid?(treatment)
+    treatment.paid? ? "✅" : "❌"
+  end
 end

@@ -8,6 +8,11 @@
 <p id="notice"><%= notice %></p>
 <div class="treatments-show">
   <p>
+    <strong>Paid:</strong>
+    <%= paid?(@treatment) %>
+  </p>
+
+  <p>
     <strong>Date of treatment:</strong>
     <%= format_date @treatment.date_of_treatment %>
   </p>
