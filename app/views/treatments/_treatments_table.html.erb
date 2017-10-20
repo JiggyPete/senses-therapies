@@ -2,8 +2,8 @@
   <thead>
     <tr>
       <th class="col-xs-1">Date of treatment</th>
-      <th class="col-xs-1">Client name</th>
       <th class="col-xs-1">Venue</th>
+      <th class="col-xs-1">Client name</th>
       <th class="col-xs-1">Paid</th>
       <th class="col-xs-1"></th>
     </tr>
@@ -13,8 +13,8 @@
     <% treatments.each do |treatment| %>
       <tr>
         <td><%= link_to format_date(treatment.date_of_treatment), {col: :date_of_treatment, val: treatment.date_of_treatment}, class: "table-striped--link" %></td>
-        <td><%= link_to treatment.client_name, {col: :client_name, val: treatment.client_name}, class: "table-striped--link" %></td>
         <td><%= link_to treatment.venue, {col: :venue, val: treatment.venue}, class: "table-striped--link" %></td>
+        <td><%= link_to treatment.client_name, {col: :client_name, val: treatment.client_name}, class: "table-striped--link" %></td>
         <td><%= link_to paid?(treatment), {col: :paid, val: treatment.paid}, class: "table-striped--link" %></td>
         <td>
           <div>

@@ -11,14 +11,22 @@ module TreatmentsHelper
     if year < 2016
       week = week + 1
     end
-    # puts Date.commercial(year, week, 1)
-    # puts format_date Date.commercial(year, week, 1)
-    # puts ""
+
     date_text = format_date Date.commercial(year, week, 1)
     "Week beginning: " + date_text
   end
 
   def paid?(treatment)
     treatment.paid? ? "✅" : "❌"
+  end
+
+  def sort_treatments(a, b)
+    date_comparision = b.date_of_treatment <=> a.date_of_treatment
+    return date_comparision unless date_comparision == 0
+
+    venue_comparision = a.venue <=> b.venue
+    return venue_comparision unless venue_comparision == 0
+
+    a.client_name <=> b.client_name
   end
 end

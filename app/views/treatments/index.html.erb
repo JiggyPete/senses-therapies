@@ -20,7 +20,7 @@
     <% year_treatments.group_by(&:week).each do |week, week_treatments| %>
       <br/>
       <label class=""> <%= week_heading year.to_i, week.to_i %></label>
-      <%= render 'treatments_table', treatments: week_treatments.sort{|a,b| a.date_of_treatment <=> b.date_of_treatment}.reverse %>
+      <%= render 'treatments_table', treatments: week_treatments.sort{|a,b| sort_treatments(a, b) } %>
       <br/>
     <% end %>
   <% end %>
