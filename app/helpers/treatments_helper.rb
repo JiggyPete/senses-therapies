@@ -12,6 +12,10 @@ module TreatmentsHelper
       week = week + 1
     end
 
+    # strange behviour around year end
+    year = year + 1 if week == 53
+    week = 1 if [0, 53].include?(week)
+
     date_text = format_date Date.commercial(year, week, 1)
     "Week beginning: " + date_text
   end
